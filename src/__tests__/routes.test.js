@@ -13,13 +13,9 @@ afterAll(() => {
 
 
 describe('inicio dos testes', () => {
-    //descrição do caso de testes
     test('acessa a rota da home', async () => {
-       //qual a rota que ele deve acessar e qual requisição deve fazer
        const response = await request(server).get('/');
-       //qual o status esperado 
        expect(response.status).toEqual(200);
-       //se todos esses passos passarem, verifica o conteúdo exibido dentro desta rota
        expect(response.text).toContain('Rota Padrão');
  
     });
